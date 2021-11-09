@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components/macro';
+import {QUERIES} from "../../constants";
 
 const SectionTitle = ({children, cornerLink}) => {
     return (
@@ -19,6 +20,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  
+  @media ${QUERIES.tabletOnly} {
+    padding-left: 2px;
+  }
 `;
 
 const Title = styled.h2`
