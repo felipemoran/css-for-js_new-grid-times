@@ -6,43 +6,43 @@ import styled from 'styled-components/macro';
 // pre-generated SVGs, though, we're cheating and mapping each
 // graph to a specific stock.
 const STOCK_GRAPHS_BY_TICKER_SYMBOL = {
-  AAPL: '/images/stock-graph-up-1.svg',
-  AMC: '/images/stock-graph-up-2.svg',
-  ENB: '/images/stock-graph-down-1.svg',
-  GOOG: '/images/stock-graph-up-3.svg',
-  AMZN: '/images/stock-graph-down-2.svg',
-  MSFT: '/images/stock-graph-down-3.svg',
+    AAPL: '/images/stock-graph-up-1.svg',
+    AMC: '/images/stock-graph-up-2.svg',
+    ENB: '/images/stock-graph-down-1.svg',
+    GOOG: '/images/stock-graph-up-3.svg',
+    AMZN: '/images/stock-graph-down-2.svg',
+    MSFT: '/images/stock-graph-down-3.svg',
 };
 
 const MarketCard = ({
-  tickerSymbol,
-  exchangeName,
-  percentChange,
-}) => {
-  const graphSrc = STOCK_GRAPHS_BY_TICKER_SYMBOL[tickerSymbol];
-  const percentageSymbol = percentChange >= 0 ? '+' : '';
-  const percentageColor =
-    percentChange >= 0
-      ? 'var(--color-secondary)'
-      : 'var(--color-urgent)';
+                        tickerSymbol,
+                        exchangeName,
+                        percentChange,
+                    }) => {
+    const graphSrc = STOCK_GRAPHS_BY_TICKER_SYMBOL[tickerSymbol];
+    const percentageSymbol = percentChange >= 0 ? '+' : '';
+    const percentageColor =
+        percentChange >= 0
+            ? 'var(--color-secondary)'
+            : 'var(--color-urgent)';
 
-  return (
-    <Wrapper>
-      <Row>
-        <TickerSymbol>{tickerSymbol}</TickerSymbol>
-        <GraphWrapper>
-          <Graph alt="" src={graphSrc} />
-        </GraphWrapper>
-      </Row>
-      <Row>
-        <Exchange>{exchangeName}</Exchange>
-        <Percentage style={{ '--color': percentageColor }}>
-          {percentageSymbol}
-          {percentChange}%
-        </Percentage>
-      </Row>
-    </Wrapper>
-  );
+    return (
+        <Wrapper>
+            <Row>
+                <TickerSymbol>{tickerSymbol}</TickerSymbol>
+                <GraphWrapper>
+                    <Graph alt="" src={graphSrc}/>
+                </GraphWrapper>
+            </Row>
+            <Row>
+                <Exchange>{exchangeName}</Exchange>
+                <Percentage style={{'--color': percentageColor}}>
+                    {percentageSymbol}
+                    {percentChange}%
+                </Percentage>
+            </Row>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.a`

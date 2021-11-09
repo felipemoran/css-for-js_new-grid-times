@@ -1,38 +1,38 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Menu, Search, User } from 'react-feather';
+import {Menu, Search, User} from 'react-feather';
 
-import { QUERIES } from '../../constants';
+import {QUERIES} from '../../constants';
 
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Logo from '../Logo';
 import Button from '../Button';
 
 const Header = () => {
-  return (
-    <header>
-      <SuperHeader>
-        <Row>
-          <ActionGroup>
-            <button>
-              <Search size={24} />
-            </button>
-            <button>
-              <Menu size={24} />
-            </button>
-          </ActionGroup>
-          <ActionGroup>
-            <button>
-              <User size={24} />
-            </button>
-          </ActionGroup>
-        </Row>
-      </SuperHeader>
-      <MainHeader>
-        <Logo />
-      </MainHeader>
-    </header>
-  );
+    return (
+        <header>
+            <SuperHeader>
+                <Row>
+                    <ActionGroup>
+                        <button>
+                            <Search size={24}/>
+                        </button>
+                        <button>
+                            <Menu size={24}/>
+                        </button>
+                    </ActionGroup>
+                    <ActionGroup>
+                        <button>
+                            <User size={24}/>
+                        </button>
+                    </ActionGroup>
+                </Row>
+            </SuperHeader>
+            <MainHeader>
+                <Logo/>
+            </MainHeader>
+        </header>
+    );
 };
 
 const SuperHeader = styled.div`
@@ -54,6 +54,7 @@ const ActionGroup = styled.div`
     FIX: Remove the inline spacing that comes with
     react-feather icons.
   */
+
   svg {
     display: block;
   }

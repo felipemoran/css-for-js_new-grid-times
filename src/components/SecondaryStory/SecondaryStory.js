@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const SecondaryStory = ({ id, title, image, location, abstract }) => {
-  return (
-    <a href={`/story/${id}`}>
-      <Wrapper>
-        <Image alt={image.alt} src={image.src} />
-        <Heading>{title}</Heading>
-        <Abstract>{abstract}</Abstract>
-      </Wrapper>
-    </a>
-  );
+const SecondaryStory = ({id, title, image, location, abstract}) => {
+    return (
+        <a href={`/story/${id}`}>
+            <Wrapper>
+                <Image alt={image.alt} src={image.src}/>
+                <Heading>{title}</Heading>
+                <Abstract>{abstract}</Abstract>
+            </Wrapper>
+        </a>
+    );
 };
 
 const Wrapper = styled.article`

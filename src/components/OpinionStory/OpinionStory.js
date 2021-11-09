@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const OpinionStory = ({ id, title, author, avatar }) => {
-  return (
-    <a href={`/story/${id}`}>
-      <Wrapper>
-        <Avatar alt="" src={avatar} />
-        <div>
-          <AuthorName>{author}</AuthorName>
-          <ArticleTitle>{title}</ArticleTitle>
-        </div>
-      </Wrapper>
-    </a>
-  );
+const OpinionStory = ({id, title, author, avatar}) => {
+    return (
+        <a href={`/story/${id}`}>
+            <Wrapper>
+                <Avatar alt="" src={avatar}/>
+                <div>
+                    <AuthorName>{author}</AuthorName>
+                    <ArticleTitle>{title}</ArticleTitle>
+                </div>
+            </Wrapper>
+        </a>
+    );
 };
 
 const Wrapper = styled.article`

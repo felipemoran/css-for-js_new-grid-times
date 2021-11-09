@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { QUERIES } from '../../constants';
+import {QUERIES} from '../../constants';
 
 const Advertisement = (props) => {
-  return (
-    <Wrapper {...props}>
-      <Prefix>Advertisement</Prefix>
-      {/*
+    return (
+        <Wrapper {...props}>
+            <Prefix>Advertisement</Prefix>
+            {/*
       In a real app, this would be created by a third-party script
       or something. This is merely a placeholder.
     */}
-      <Box />
-    </Wrapper>
-  );
+            <Box/>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.div`

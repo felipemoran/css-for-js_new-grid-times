@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import {
-  MAIN_STORY,
-  OPINION_STORIES,
-  SECONDARY_STORIES,
+    MAIN_STORY,
+    OPINION_STORIES,
+    SECONDARY_STORIES,
 } from '../../data';
 
 import SectionTitle from '../SectionTitle';
@@ -14,34 +14,34 @@ import OpinionStory from '../OpinionStory';
 import Advertisement from '../Advertisement';
 
 const MainStoryGrid = () => {
-  return (
-    <Wrapper>
-      <MainStorySection>
-        <MainStory {...MAIN_STORY} />
-      </MainStorySection>
+    return (
+        <Wrapper>
+            <MainStorySection>
+                <MainStory {...MAIN_STORY} />
+            </MainStorySection>
 
-      <SecondaryStorySection>
-        <StoryList>
-          {SECONDARY_STORIES.map((story, index) => (
-            <SecondaryStory key={story.id} {...story} />
-          ))}
-        </StoryList>
-      </SecondaryStorySection>
+            <SecondaryStorySection>
+                <StoryList>
+                    {SECONDARY_STORIES.map((story, index) => (
+                        <SecondaryStory key={story.id} {...story} />
+                    ))}
+                </StoryList>
+            </SecondaryStorySection>
 
-      <OpinionSection>
-        <SectionTitle>Opinion</SectionTitle>
-        <StoryList>
-          {OPINION_STORIES.map((story, index) => (
-            <OpinionStory key={story.id} {...story} />
-          ))}
-        </StoryList>
-      </OpinionSection>
+            <OpinionSection>
+                <SectionTitle>Opinion</SectionTitle>
+                <StoryList>
+                    {OPINION_STORIES.map((story, index) => (
+                        <OpinionStory key={story.id} {...story} />
+                    ))}
+                </StoryList>
+            </OpinionSection>
 
-      <AdvertisementSection>
-        <Advertisement />
-      </AdvertisementSection>
-    </Wrapper>
-  );
+            <AdvertisementSection>
+                <Advertisement/>
+            </AdvertisementSection>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.div`
