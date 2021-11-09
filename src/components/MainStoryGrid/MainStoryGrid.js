@@ -66,6 +66,7 @@ const Wrapper = styled.div`
       'advertisement advertisement'
       'opinion-stories opinion-stories';
     gap: 48px 0;
+    margin-bottom: 64px;
   }
   
   @media ${QUERIES.laptopAndUp} {
